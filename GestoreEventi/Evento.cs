@@ -83,23 +83,51 @@ namespace GestoreEventi
                 BigliettiRestanti = postiTotale;
                 Console.WriteLine("I biglietti restanti sono " + BigliettiRestanti);
 
-                Console.WriteLine("Quanti posti vuoi disdire?");
-
-                BigliettiDisdetti = int.Parse(Console.ReadLine());
-                postiTotale = BigliettiDisdetti + postiTotale;
-                Console.WriteLine("I biglietti disponibili sono" + postiTotale)
-                ;
-                return;
+                var continuaCicloWhile = true;
+                while (continuaCicloWhile)
+                {
 
 
+                    Console.WriteLine("Vuoi disdire posti? si/no");
+                    var rispostaUtente = Console.ReadLine();
+
+                    if (rispostaUtente == "no")
+                    {
+                        continuaCicloWhile = false;
+                        Console.WriteLine("Grazie per la prenotazione");
+                        return;
+                    }
+
+                    if (rispostaUtente == "si")
+
+                    {
+                        Console.WriteLine("Quanti posti vuoi disdire?");
+
+                        BigliettiDisdetti = int.Parse(Console.ReadLine());
+                        postiTotale = BigliettiDisdetti + postiTotale;
+                        Console.WriteLine("I biglietti disponibili sono" + postiTotale);
+                        return;
+                    }
+                }
             }
-
-
-
         }
+
+                 
+         
+        public void Data()
+        {
+            string data = "";
+            data += "dd/MM/yyyy";
+
+            Console.WriteLine("Inserisci la data dell'evento (" + data + ")");
+            data = Console.ReadLine();
+        }
+
+
+
+        
     }
 }
-
 
  /*
             public override string ToString()
@@ -114,14 +142,9 @@ namespace GestoreEventi
 
                 return rappresentazioneInStringa;
             }
-
-            public override string ToString()
-            {
-                string data = ("");
-                data += "dd/MM/yyyy";
-                return data;
-            }
-            */
+ */
+            
+            
 
 
 

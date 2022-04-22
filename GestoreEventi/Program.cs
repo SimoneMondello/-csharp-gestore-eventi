@@ -10,7 +10,11 @@ Console.WriteLine("Hello, World!");
 Evento mioEvento = new Evento("La bella e la bestia", 22/04/2022, 200, 0);
 
 mioEvento.GetTitolo();
+mioEvento.Data();
 mioEvento.GetpostiTotale();
 mioEvento.PrenotaPosti();
 mioEvento.DisdiciPosti();
+
+
+
 
