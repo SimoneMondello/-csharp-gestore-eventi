@@ -69,6 +69,7 @@ namespace GestoreEventi
                 postiTotale = postiTotale - postiPrenotati;
                 Console.WriteLine(postiTotale);
                 return;
+
             }
         }
 
